@@ -1,0 +1,51 @@
+<html>
+  
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture Land Co Ltd - Area25</title>
+    <link rel="stylesheet" href="styleNew.css">
+    
+</head>
+<body onload="silder()">
+<div class="banner">
+    <div class="slinder">
+    <img src="imageNew/img1.jpg" id="slideImg">
+    </div>
+    <div class="overlay">
+    <div class="content">
+    <h1><span>Area-25</span> Shop</h1>
+    <h3>The best home furniture,accessories and designs in the City</h3> 
+    <div>
+        <button type="button"> Go Shopping </button>
+    </div>
+    </div>
+   
+    </div>
+</div>
+<script>
+var sliderImg = document.getElementById("sliderImg");
+    var images = new Array(
+         "imageNew/img1.jpg",
+          "imageNew/img2.jpg",
+          "imageNew/img3.jpg",
+          "imageNew/img4.jpg",
+          "imageNew/img5.jpg",
+          "imageNew/img6.jpg",
+          "imageNew/img7.jpg",
+          "imageNew/img8.jpg",
+          "imageNew/img9.jpg",
+         "imageNew/img10.jpg"
+    );
+    var len = images.length;
+    var i = 0;
+    function silder(){
+        if(i > len-1){
+            i =0;
+        }
+        slideImg.src = images[i];
+        i++;
+        setTimeout('silder()', 3000);
+    }
+</script>
+</body>
+</html>
